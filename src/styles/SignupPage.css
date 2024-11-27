@@ -1,0 +1,134 @@
+:root {
+    --primarycolor: rgb(99,76,159);
+    --primarybackground: white;
+    --secondarybackground: rgb(241, 240, 240);
+    --navbar1: rgb(99,76,159);
+    --navbar2: rgb(241, 240, 240);
+    --blackwhite: black;
+    --icons: rgb(60, 60, 60);
+    --darktext: rgba(0, 0, 0, 0.745);
+    --purplewhite: rgb(99,76,159);
+    --grey: rgb(92, 91, 91);
+    --whitewhite: rgb(241, 240, 240);
+  }
+  
+  .sp-signup-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--secondarybackground);
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .sp-title {
+    color: var(--primarycolor);
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  
+  .sp-form-container {
+    background-color: var(--primarybackground);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 100%;
+    max-width: 450px;
+    box-sizing: border-box;
+  }
+  
+  .sp-form-container > div {
+    margin-bottom: 20px;
+  }
+  
+  .sp-form-container label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--darktext);
+    font-weight: 600;
+  }
+  
+  .sp-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--grey);
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  .sp-input:focus {
+    outline: none;
+    border-color: var(--primarycolor);
+    box-shadow: 0 0 0 2px rgba(99, 76, 159, 0.2);
+  }
+  
+  .sp-error-message {
+    color: red;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .sp-button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primarycolor);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .sp-button:hover {
+    background-color: rgb(79, 56, 139);
+  }
+  
+  .sp-login-link {
+    margin-top: 20px;
+    text-align: center;
+    color: var(--darktext);
+  }
+  
+  .sp-login-link a {
+    color: var(--primarycolor);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .sp-login-link a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive Adjustments */
+  @media screen and (max-width: 600px) {
+    .sp-title {
+      font-size: 2rem;
+    }
+  
+    .sp-form-container {
+      padding: 25px;
+      width: 95%;
+      max-width: 100%;
+    }
+  
+    .sp-input,
+    .sp-button {
+      padding: 10px;
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media screen and (max-width: 400px) {
+    .sp-title {
+      font-size: 1.8rem;
+    }
+  
+    .sp-form-container {
+      padding: 20px;
+    }
+  }

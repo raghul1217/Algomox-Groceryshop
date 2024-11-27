@@ -1,0 +1,35 @@
+.toggle-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.toggle {
+  display: none; /* Hide the default checkbox */
+}
+
+.toggle-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--purplewhite);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.icon {
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.sun {
+  color: var(--white);
+}
+
+.moon {
+  color: #6c757d;
+}

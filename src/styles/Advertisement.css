@@ -1,0 +1,115 @@
+
+  .advertisement-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px 60px;
+    background-color: white;
+    font-family: "Montserrat", sans-serif;
+    background-color: var(--primarybackground);
+  }
+  
+  .advertisement-card {
+    flex: 1;
+    max-width: 32%;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    color: var(--primarycolor);
+    background-color: var(--primarybackground);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .advertisement-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .advertisement-card p {
+    font-size: 1rem;
+    margin: 0;
+    color: var(--darktext);
+  }
+  
+  .advertisement-card h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: var(--darktext);
+  }
+  
+  .advertisement-card p {
+    font-size: 1rem;
+    color: var(--darktext);
+    font-weight: 200px;
+    padding-left: 15px;
+  }
+
+  .advertisement-card #ad-content{
+    color: rgb(255, 172, 5);
+    padding: 0 16px;
+    padding-top: 30px;
+    font-weight: 600;
+  }
+  
+  .shop-now-btn {
+    background-color: var(--primarycolor);
+    color: var(--whitewhite);
+    border: none;
+    padding: 10px 20px;
+    padding-left: 16px;
+    margin-left: 16px;
+    margin-top: 12px;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 25%;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .shop-now-btn:hover {
+    background-color: var(--darktext);
+    transform: scale(1.05);
+  }
+
+  
+  @media (max-width: 768px) {
+    .advertisement-container {
+      flex-direction: column;
+      gap: 15px;
+      padding: 10px;
+      margin-top: -140px;
+    }
+  
+    .advertisement-card {
+      max-width: 100%;
+    }
+
+    .advertisement-card h2{
+      font-size: 17px;
+    }
+
+    .advertisement-card p{
+      font-size: 13px;
+    }
+
+    .advertisement-card #ad-content{
+      padding-top: 20px;
+    }
+
+    .shop-now-btn{
+      padding: 8px 10px;
+      width: 35%;
+      margin-bottom: 15px;
+    }
+
+  }
+  

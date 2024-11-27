@@ -1,0 +1,130 @@
+
+  .d-navbar {
+    width: 100%;
+    background-color: var(--navbar1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: "Montserrat", serif;
+    color: var(--blackwhite);
+    position: fixed;   /* Fixes the navbar at the top */
+    top: 0;            /* Ensures it stays at the top */
+    left: 0;           /* Stays on the left side */
+    z-index: 1000;     /* Ensures it stays above other content */
+    padding: 0 0 0px 0; /* Optional: Adds some space below the navbar */
+  }
+  
+  .nav-line1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 70px;
+  }
+
+  .nav-line2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 70px;
+  }
+  
+  /* Brand Styling */
+  .d-brand p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--whitewhite);
+  }
+  
+  .d-brand span {
+    color: var(--whitewhite);
+  }
+  
+  /* Search Bar Styling */
+  .d-searchbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+  }
+  
+  .d-searchbar input {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    color: var(--darktext);
+    background-color: var(--navbar2);
+    border: none;
+    outline: none;
+    font-family: "Montserrat", serif;
+  }
+  
+  .d-searchbar input::placeholder {
+    color: var(--darktext);
+  }
+  
+  .d-searchbar input:focus {
+    outline: none;
+    border-color: var(--white);
+    color: var(--darktext);
+  }
+  
+  /* Icon Styling */
+  .d-navicons {
+    display: flex;
+    gap: 15px;
+    font-size: 1.5rem;
+  }
+  
+  .d-navicons svg {
+    cursor: pointer;
+    color: var(--whitewhite);
+  }
+  
+  /* .d-navicons svg:hover {
+    color: var(--grey);
+  } */
+  
+  /* Second Line Navigation */
+  .nav-line2 {
+    background-color: var(--navbar2);
+  }
+  
+  .d-navleft ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .d-navleft ul li a {
+    text-decoration: none;
+    color: var(--darktext);
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+  .d-navleft ul li a:hover {
+    color: var(--purple);
+  }
+
+  .d-navright{
+    display: flex;
+  }
+  
+
+  .d-navright button{
+    border: none;
+    outline: none;
+    background-color: var(--primarycolor);
+    color: var(--whitewhite);
+    /* padding: 2px 16px; */
+    height: 30px;
+    padding: 8px 20px;
+    border-radius: 4px;
+    margin-right: 20px;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  

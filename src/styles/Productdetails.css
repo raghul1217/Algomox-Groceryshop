@@ -1,0 +1,165 @@
+.pd-product-details {
+  display: flex;
+  gap: 30px;
+  padding: 40px;
+  background-color: var(--primarybackground);
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin: 20px auto;
+  align-items: center;
+}
+
+.pd-product-image {
+  flex: 0 0 300px;
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 2px solid var(--primarycolor);
+}
+
+.pd-details {
+  flex-grow: 1;
+  padding: 0 20px;
+}
+
+.pd-details h1 {
+  font-size: 28px;
+  color: var(--primarycolor);
+  margin-bottom: 10px;
+}
+
+.pd-details p {
+  font-size: 16px;
+  color: var(--darktext);
+  margin-bottom: 10px;
+}
+
+.pd-star-rating {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 15px;
+}
+
+.pd-star-rating .star {
+  font-size: 20px;
+  color: var(--primarycolor);
+  cursor: pointer;
+}
+
+.pd-star-rating .star:hover {
+  color: var(--purplewhite);
+}
+
+.pd-quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 15px 0;
+}
+
+.pd-quantity-btn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--primarycolor);
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pd-quantity-btn:hover {
+  background-color: var(--purplewhite);
+}
+
+.pd-quantity-controls span {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--darktext);
+}
+
+.pd-add-to-cart-btn,
+.pd-wishlist-btn {
+  display: inline-block;
+  margin: 10px 10px 0 0;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pd-add-to-cart-btn {
+  background-color: var(--primarycolor);
+  color: white;
+}
+
+.pd-wishlist-btn {
+  background-color: var(--grey);
+  color: white;
+}
+
+.pd-add-to-cart-btn:hover {
+  background-color: var(--purplewhite);
+}
+
+.pd-wishlist-btn:hover {
+  background-color: var(--darktext);
+}
+
+.pd-price {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--primarycolor);
+  margin-bottom: 15px;
+}
+
+.pd-separator {
+  height: 1px;
+  background-color: var(--grey);
+  margin: 15px 0;
+}
+
+.pd-feature-list {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+.pd-feature-list li {
+  font-size: 16px;
+  color: var(--darktext);
+  margin-bottom: 8px;
+}
+
+.pd-feature-list li:before {
+  content: "✔";
+  margin-right: 10px;
+  color: var(--primarycolor);
+}
+
+
+.pd-share-btn {
+  background-color: var(--primarycolor);
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.pd-share-btn:hover {
+  background-color: var(--grey);
+}
+
+.pd-share-btn {
+  position: relative;
+  z-index: 10;
+}

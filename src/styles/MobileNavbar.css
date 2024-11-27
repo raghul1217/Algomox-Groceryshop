@@ -1,0 +1,170 @@
+/* Desktop Styles */
+.d-navbar {
+    width: 100%;
+    background-color: var(--navbar1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: "Montserrat", serif;
+    color: var(--blackwhite);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 0 0 0px 0;
+  }
+  
+  .nav-line1, .nav-line2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 70px;
+  }
+  
+  /* Mobile-specific styles */
+  .mobile {
+    display: none;
+  }
+  
+  .desktop {
+    display: block;
+  }
+  
+  /* Mobile Navbar */
+  .mobile-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    align-items: center;
+  }
+  
+  .menu-bar {
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .mobile-nav {
+    background-color: var(--navbar2);
+    padding: 10px;
+    position: absolute;
+    width: 100%;
+    top: 50px;
+  }
+  
+  .mobile-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .mobile-nav ul li {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .mobile-nav ul li a {
+    text-decoration: none;
+    color: var(--darktext);
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+  .mobile-nav ul li a:hover {
+    color: var(--purple);
+  }
+  
+  .mobile-icons {
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--navbar2);
+    padding: 10px;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .mobile-searchbar {
+    position: fixed;
+    bottom: 60px;
+    width: 100%;
+    padding: 10px;
+    background-color: var(--navbar2);
+  }
+  
+  .mobile-searchbar input {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: var(--navbar2);
+    border: none;
+    outline: none;
+  }
+
+
+  /* mobile bottom icons */
+  .m-navbar-icons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--navbar2);
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .m-icon {
+    font-size: 18px;
+    color: var(--primarycolor);
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .m-icon:hover {
+    color: var(--primarycolor);
+  }
+
+  .mobile-icons .m-bottom-icons p{
+    font-size: 12px;
+    text-decoration: none;
+  }
+
+  .m-bottom-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .mn-link{
+    text-decoration: none;
+  }
+
+  
+  
+  /* Media Queries for Mobile View */
+  @media (max-width: 768px) {
+    .desktop {
+      display: none;
+    }
+  
+    .mobile {
+      display: block;
+    }
+  
+    .d-navbar {
+      position: relative;
+    }
+  }
+
+
+  @media (min-width: 768px){
+    .desktop{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+  }
+  

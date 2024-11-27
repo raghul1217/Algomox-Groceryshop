@@ -1,0 +1,126 @@
+:root {
+    --primarycolor: rgb(99,76,159);
+    --primarybackground: white;
+    --secondarybackground: rgb(241, 240, 240);
+    --navbar1: rgb(99,76,159);
+    --navbar2: rgb(241, 240, 240);
+    --blackwhite: black;
+    --icons: rgb(60, 60, 60);
+    --darktext: rgba(0, 0, 0, 0.745);
+    --purplewhite: rgb(99,76,159);
+    --grey: rgb(92, 91, 91);
+    --whitewhite: rgb(241, 240, 240);
+  }
+  
+  .lp-login-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--secondarybackground);
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .lp-title {
+    color: var(--primarycolor);
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  
+  .lp-form-container {
+    background-color: var(--primarybackground);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-sizing: border-box;
+  }
+  
+  .lp-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--grey);
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  .lp-input:focus {
+    outline: none;
+    border-color: var(--primarycolor);
+    box-shadow: 0 0 0 2px rgba(99, 76, 159, 0.2);
+  }
+  
+  .lp-button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primarycolor);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .lp-button:hover {
+    background-color: rgb(79, 56, 139);
+  }
+  
+  .lp-message {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .lp-signup-link {
+    margin-top: 20px;
+    text-align: center;
+    color: var(--darktext);
+  }
+  
+  .lp-signup-link a {
+    color: var(--primarycolor);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .lp-signup-link a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive Adjustments */
+  @media screen and (max-width: 600px) {
+    .lp-title {
+      font-size: 2rem;
+    }
+  
+    .lp-form-container {
+      padding: 25px;
+      width: 95%;
+      max-width: 100%;
+    }
+  
+    .lp-input,
+    .lp-button {
+      padding: 10px;
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media screen and (max-width: 400px) {
+    .lp-title {
+      font-size: 1.8rem;
+    }
+  
+    .lp-form-container {
+      padding: 20px;
+    }
+  }

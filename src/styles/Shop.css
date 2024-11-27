@@ -1,0 +1,231 @@
+
+  
+  .shop-container {
+    display: flex;
+    padding: 20px;
+    font-family: "Montserrat", sans-serif;
+    height: 100vh;
+    padding: 20px 60px;
+    background-color: var(--primarybackground);
+    margin-top: -8px;
+    display: none;
+  }
+  
+  /* Left Filters */
+  .d-shop-left {
+    width: 25%;
+    padding: 20px;
+    background-color: var(--secondarybackground);
+  }
+  
+  .filter-section h3 {
+    color: var(--primarycolor);
+    margin-bottom: 10px;
+  }
+  
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .filter-section ul li {
+    margin: 8px 0;
+  }
+  
+  .filter-section label {
+    color: var(--darktext);
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  /* Right Products */
+  .d-shop-right {
+    width: 75%;
+    padding: 20px;
+    height: calc(100vh - 20px); /* Full viewport height minus padding */
+    overflow-y: auto; /* Enable vertical scrolling */
+    direction: rtl; /* Move the scrollbar to the left */
+    box-sizing: border-box;
+  }
+
+  .d-shop-right * {
+    direction: ltr; /* Ensure the text and content remain left-to-right */
+  }
+  
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+  }
+
+  /* popular products */
+  .pp-products-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px;
+    padding: 10px 60px;
+    display: none;
+  }
+
+  .popular-products-container h2{
+    font-family: 'Montserrat', sans-serif;
+    padding-left: 60px;
+    padding-top: 20px;
+    padding-bottom: 16px;
+    color: var(--darktext);
+    display: none;
+  }
+  
+  .product-card {
+    background-color: var(--secondarybackground);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    height: 270px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* For hover effect */
+  }
+  
+  .product-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Slightly deeper shadow on hover */
+    transform: translateY(-5px); /* Lift effect */
+  }
+
+  .product-brand{
+    text-align: left;
+    font-size: 14px;
+  }
+  
+  .product-image {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto;
+  }
+  
+  .favorite-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: var(--primarycolor);
+    cursor: pointer;
+  }
+  
+  .product-category {
+    font-size: 12px;
+    color: var(--primarycolor);
+    text-align: left;
+  }
+  
+  .product-name {
+    margin: 10px 0;
+    font-size: 16px;
+    color: var(--darktext);
+    text-align: left;
+  }
+  
+  .product-details1 {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    align-items: center;
+  }
+  
+  .add-to-cart-btn {
+    background-color: var(--primarycolor);
+    color: var(--whitewhite);
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* .add-to-cart-btn:hover {
+    background-color: var(--darktext);
+  } */
+
+  /* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .page-btn {
+    background-color: var(--white);
+    border: 1px solid var(--primarycolor);
+    margin: 0 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .page-btn.active {
+    background-color: var(--primarycolor);
+    color: var(--white);
+  }
+  
+  .product-link {
+    text-decoration: none;
+    color: inherit; /* Prevent link styling from altering the card appearance */
+  }
+  
+  .product-image-wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .eye-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+  }
+  
+  .product-image-wrapper:hover .eye-icon {
+    opacity: 1;
+  }
+  
+  .product-image {
+    width: 170px;
+    height: 150px;
+    transition: transform 0.3s ease;
+  }
+  
+  .product-image-wrapper:hover .product-image {
+    transform: scale(1.1);
+  }
+  
+/* budget planning */
+
+  .add-to-cart-btn.exceed-budget {
+    background-color: red;
+    cursor: not-allowed;
+  }
+
+  .budget-input{
+    padding-bottom: 10px;
+  }
+
+  .budget-input input{
+    border: none;
+    outline: none;
+    padding: 7px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    width: 40%;
+    border: 1px solid var(--primarycolor);
+    margin-bottom: 8px;
+  }
+
+  .budget-input h3{
+    font-size: 18px;
+  }
+  
