@@ -21,9 +21,9 @@ const Footer = () => {
       <div className="footer-columns">
         {/* Column 1 */}
         <div className="footer-column">
-          <h2 className="footer-brand">
-            <FontAwesomeIcon icon={faShoppingCart} /> GroverMart
-          </h2>
+          <h3 className="footer-brand">
+            <FontAwesomeIcon icon={faShoppingCart} /> GrocerMart
+          </h3>
           <p>Feel free to follow us on our social media handles:</p>
           <div className="social-icons">
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
