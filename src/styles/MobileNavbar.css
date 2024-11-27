@@ -157,6 +157,16 @@
     .d-navbar {
       position: relative;
     }
+
+    .mobile-nav ul li{
+      text-align: left;
+    }
+
+    .mobile-nav .d-navright{
+      padding: 10px 8px;
+      display: flex;
+      justify-content: space-between;
+    }
   }
 
 

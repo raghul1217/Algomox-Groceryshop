@@ -60,7 +60,7 @@
     font-weight: 600;
   }
   
-  .shop-now-btn {
+  .a-shop-now-btn {
     background-color: var(--primarycolor);
     color: var(--whitewhite);
     border: none;
@@ -75,7 +75,7 @@
     transition: background-color 0.3s, transform 0.3s;
   }
   
-  .shop-now-btn:hover {
+  .a-shop-now-btn:hover {
     background-color: var(--darktext);
     transform: scale(1.05);
   }
@@ -105,10 +105,11 @@
       padding-top: 20px;
     }
 
-    .shop-now-btn{
-      padding: 8px 10px;
-      width: 35%;
+    .a-shop-now-btn{
+      width: 85px;
       margin-bottom: 15px;
+      font-size: 12px;
+      padding: 10px 8px;
     }
 
   }

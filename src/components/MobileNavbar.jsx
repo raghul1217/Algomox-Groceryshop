@@ -103,7 +103,12 @@ const MobileNavbar = ({ isDark, setIsDark }) => {
               <li><a href="#">Beverages</a></li>
               <li><a href="#">Contact</a></li>
             </ul>
+            <div className="d-navright">
+          <button id="d-navsigup">Signup</button>
+          <Toggle isChecked={isDark} handleChange={() => setIsDark(!isDark)} />
+        </div>
           </div>
+          
         )}
 
 <div className="mobile-icons">

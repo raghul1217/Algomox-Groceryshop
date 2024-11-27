@@ -44,7 +44,7 @@ const Advertisement = ({ isDark }) => {
           <p id="ad-content">{card.content}</p>
           <h2 style={{width: '60%', 'padding-top': "16px", 'padding-left': "16px", }}>{card.title}</h2>
           <p>{card.subtitle}</p>
-          <button className="shop-now-btn">Shop Now</button>
+          <button className="a-shop-now-btn">Shop Now</button>
         </div>
       ))}
     </div>
