@@ -13,7 +13,7 @@ import SignupPage from "./pages/SignupPage";
 import MobileNavbar from "./components/MobileNavbar";
 
 function App() {
-  const [isDark, setIsDark] = useLocalStorage("isDark", true);
+  const [isDark, setIsDark] = useLocalStorage("isDark", false);
 
   return (
     <div data-theme={isDark ? "dark" : "light"}>
