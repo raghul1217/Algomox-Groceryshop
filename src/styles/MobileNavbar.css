@@ -45,7 +45,7 @@
     background-color: var(--navbar2);
     padding: 10px;
     position: absolute;
-    width: 100%;
+    width: 94%;
     top: 50px;
   }
   
@@ -141,6 +141,7 @@
   .mn-link{
     text-decoration: none;
   }
+
 
   
   
