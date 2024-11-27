@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
+
 import potato from "../assets/products/vegtables/potato1-pr1.png";
 
 const productData = [
