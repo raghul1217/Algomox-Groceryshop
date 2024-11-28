@@ -8,7 +8,7 @@
     padding: 20px 60px;
     background-color: var(--primarybackground);
     margin-top: -8px;
-
+    padding-top: 130px;
   }
   
   /* Left Filters */
@@ -148,6 +148,18 @@
     right: 8px;
     color: var(--primarycolor);
     cursor: pointer;
+    z-index: 10; /* Ensure it's clickable and on top of other elements */
+  }
+
+  .s-productcard{
+    text-decoration: none;
+  }
+  
+  @media (max-width: 768px) {
+    .favorite-icon {
+      top: 12px; /* Adjust top position for mobile */
+      right: 12px; /* Adjust right position for mobile */
+    }
   }
   
   .product-category {
@@ -238,29 +250,41 @@
   
 /* budget planning */
 
-  .add-to-cart-btn.exceed-budget {
-    background-color: red;
-    cursor: not-allowed;
-  }
+.add-to-cart-btn {
+  /* Normal button styling */
+  background-color: var(--primarycolor);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
 
-  .budget-input{
-    padding-bottom: 10px;
-  }
+.add-to-cart-btn.exceed-budget {
+  background-color: red;
+  cursor: not-allowed;
+}
 
-  .budget-input input{
-    border: none;
-    outline: none;
-    padding: 7px 10px;
-    font-size: 16px;
-    border-radius: 5px;
-    width: 40%;
-    border: 1px solid var(--primarycolor);
-    margin-bottom: 8px;
-  }
+.budget-input {
+  padding-bottom: 10px;
+}
 
-  .budget-input h3{
-    font-size: 18px;
-  }
+.budget-input input {
+  border: none;
+  outline: none;
+  padding: 7px 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  width: 40%;
+  border: 1px solid var(--primarycolor);
+  margin-bottom: 8px;
+}
+
+.budget-input h3 {
+  font-size: 18px;
+}
+
 
   .m-shop-left{
     display: none;

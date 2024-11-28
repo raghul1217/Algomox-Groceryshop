@@ -15,12 +15,48 @@ import potato4 from "../assets/products/vegtables/potato3-resized.png";
 const Shop = () => {
   // Predefined Product Data with Prices
   const productData = [
-    { name: "Apple", image: potato4, category: "Fruits", brand: "Ooty Products", price: 150 },
-    { name: "Banana", image: potato4, category: "Fruits", brand: "Nestle", price: 50 },
-    { name: "Chips", image: potato4, category: "Snacks", brand: "Parle", price: 100 },
-    { name: "Milk", image: potato4, category: "Dairy", brand: "Coca-Cola", price: 120 },
-    { name: "Drinks", image: potato4, category: "Dairy", brand: "Coca-Cola", price: 120 },
-    { name: "Snacks", image: potato4, category: "Dairy", brand: "Coca-Cola", price: 120 },
+    {
+      name: "Apple",
+      image: potato4,
+      category: "Fruits",
+      brand: "Ooty Products",
+      price: 150,
+    },
+    {
+      name: "Banana",
+      image: potato4,
+      category: "Fruits",
+      brand: "Nestle",
+      price: 50,
+    },
+    {
+      name: "Chips",
+      image: potato4,
+      category: "Snacks",
+      brand: "Parle",
+      price: 100,
+    },
+    {
+      name: "Milk",
+      image: potato4,
+      category: "Dairy",
+      brand: "Coca-Cola",
+      price: 120,
+    },
+    {
+      name: "Drinks",
+      image: potato4,
+      category: "Dairy",
+      brand: "Coca-Cola",
+      price: 120,
+    },
+    {
+      name: "Snacks",
+      image: potato4,
+      category: "Dairy",
+      brand: "Coca-Cola",
+      price: 120,
+    },
   ];
 
   // Generate 50 unique products based on the predefined product data
@@ -121,8 +157,10 @@ const Shop = () => {
   const addToWishlist = (product) => {
     console.log("addToWishlist called with:", product); // Verify the product object
     const existingWishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
-    const isProductInWishlist = existingWishlist.some((item) => item.id === product.id);
-  
+    const isProductInWishlist = existingWishlist.some(
+      (item) => item.id === product.id
+    );
+
     if (!isProductInWishlist) {
       const updatedWishlist = [...existingWishlist, product];
       localStorage.setItem("wishlist", JSON.stringify(updatedWishlist));
@@ -202,7 +240,7 @@ const Shop = () => {
         </div>
       </div>
 
-       <div className="m-shop-left">
+      <div className="m-shop-left">
         <div className="m-filter-head-div">
           <div className="filter-header" onClick={toggleFilter}>
             <h3>Filter</h3>
@@ -260,24 +298,22 @@ const Shop = () => {
             </div>
           )}
         </div>
-      </div> 
- 
-
+      </div>
 
       {/* Right Section - Products */}
       <div className="d-shop-right">
         <div className="products-grid">
           {paginatedProducts.map((product) => (
             <div className="product-card" key={product.id}>
-            <div
-              className="favorite-icon"
-              onClick={() => {
-                console.log("Wishlist icon clicked!");
-                addToWishlist(product);
-              }}
-            >
-              <FontAwesomeIcon icon={faHeart} />
-            </div>
+              <div
+                className="favorite-icon"
+                onClick={() => {
+                  console.log("Wishlist icon clicked!");
+                  addToWishlist(product);
+                }}
+              >
+                <FontAwesomeIcon icon={faHeart} />
+              </div>
               <div className="product-image-wrapper">
                 <img
                   src={product.image}
@@ -289,21 +325,28 @@ const Shop = () => {
                 </Link>
               </div>
 
-              <p className="product-category">{product.category}</p>
-              <h3 className="product-name">{product.name}</h3>
-              <p className="product-brand">By {product.brand}</p>
-              <div className="product-details1">
-                <p className="product-price">₹{product.price}</p>
-                <button
-                  className={`add-to-cart-btn ${
-                    cartTotal + product.price > budget ? "exceed-budget" : ""
-                  }`}
-                  onClick={() => addToCart(product)}
-                  disabled={cartTotal + product.price > budget}
-                >
-                  <FontAwesomeIcon icon={faCartShopping} /> Add
-                </button>
-              </div>
+              <Link to={`/products/${product.id}`} className="s-productcard">
+  <p className="product-category">{product.category}</p>
+  <h3 className="product-name">{product.name}</h3>
+  <p className="product-brand">By {product.brand}</p>
+  <div className="product-details1">
+    <p className="product-price">₹{product.price}</p>
+    <button
+      className={`add-to-cart-btn ${
+        budget > 0 && cartTotal + product.price > budget ? "exceed-budget" : ""
+      }`}
+      onClick={(e) => {
+        // Prevent navigation when clicking the button
+        e.preventDefault();
+        addToCart(product);
+      }}
+      disabled={budget > 0 && cartTotal + product.price > budget}
+    >
+      <FontAwesomeIcon icon={faCartShopping} /> Add
+    </button>
+  </div>
+</Link>
+
             </div>
           ))}
         </div>
@@ -313,7 +356,9 @@ const Shop = () => {
           {Array.from({ length: totalPages }, (_, index) => (
             <button
               key={index}
-              className={`page-btn ${currentPage === index + 1 ? "active" : ""}`}
+              className={`page-btn ${
+                currentPage === index + 1 ? "active" : ""
+              }`}
               onClick={() => setCurrentPage(index + 1)}
             >
               {index + 1}
