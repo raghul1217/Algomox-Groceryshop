@@ -119,14 +119,14 @@ const Shop = () => {
 
   // Add to Wishlist
   const addToWishlist = (product) => {
+    console.log("addToWishlist called with:", product); // Verify the product object
     const existingWishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
-    const isProductInWishlist = existingWishlist.some(
-      (item) => item.id === product.id
-    );
-
+    const isProductInWishlist = existingWishlist.some((item) => item.id === product.id);
+  
     if (!isProductInWishlist) {
       const updatedWishlist = [...existingWishlist, product];
       localStorage.setItem("wishlist", JSON.stringify(updatedWishlist));
+      console.log("Updated wishlist:", updatedWishlist); // Log the updated wishlist
       alert(`${product.name} added to wishlist!`);
     } else {
       alert(`${product.name} is already in your wishlist!`);
@@ -160,7 +160,6 @@ const Shop = () => {
             <label>
               <h3>Budget:</h3>
               <input
-                // type="number"
                 value={budget}
                 onChange={(e) => setBudget(Number(e.target.value))}
                 placeholder="Enter budget..."
@@ -270,13 +269,15 @@ const Shop = () => {
         <div className="products-grid">
           {paginatedProducts.map((product) => (
             <div className="product-card" key={product.id}>
-              <div
-                className="favorite-icon"
-                onClick={() => addToWishlist(product)}
-              >
-                <FontAwesomeIcon icon={faHeart} />
-              </div>
-
+            <div
+              className="favorite-icon"
+              onClick={() => {
+                console.log("Wishlist icon clicked!");
+                addToWishlist(product);
+              }}
+            >
+              <FontAwesomeIcon icon={faHeart} />
+            </div>
               <div className="product-image-wrapper">
                 <img
                   src={product.image}

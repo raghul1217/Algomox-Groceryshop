@@ -144,8 +144,8 @@
   
   .favorite-icon {
     position: absolute;
-    top: 12px;
-    right: 12px;
+    top: 8px;
+    right: 8px;
     color: var(--primarycolor);
     cursor: pointer;
   }
@@ -216,20 +216,13 @@
   
   .eye-icon {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    top: 125px; /* Adjust for the top position */
+    right: -10px; /* Adjust for the right position */
     padding: 10px;
     border-radius: 50%;
-    color: white;
+    color: var(--primarycolor);
     cursor: pointer;
     transition: opacity 0.3s ease;
-  }
-  
-  .product-image-wrapper:hover .eye-icon {
-    opacity: 1;
   }
   
   .product-image {
@@ -241,6 +234,7 @@
   .product-image-wrapper:hover .product-image {
     transform: scale(1.1);
   }
+  
   
 /* budget planning */
 

@@ -12,13 +12,13 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 import { IoStorefrontSharp, IoMenuSharp } from "react-icons/io5";
 import { Toggle } from "./Toggle";
 import "../styles/MobileNavbar.css";
-import { faMicrophone } from '@fortawesome/free-solid-svg-icons'; 
+import { faMicrophone } from "@fortawesome/free-solid-svg-icons";
 import { AiOutlineBars } from "react-icons/ai";
 import { FiFilter } from "react-icons/fi";
 import { MdCategory } from "react-icons/md";
 import { FaFolderOpen } from "react-icons/fa";
 
-const MobileNavbar = ({ isDark, setIsDark, onSearch  }) => {
+const MobileNavbar = ({ isDark, setIsDark, onSearch }) => {
   const navigate = useNavigate();
   const location = useLocation(); // Get current route location
 
@@ -39,12 +39,12 @@ const MobileNavbar = ({ isDark, setIsDark, onSearch  }) => {
     }
   };
 
-   // Manage search query and visibility of search bar// State to store search input
-   const [showSearchBar, setShowSearchBar] = useState(false); // Toggle for mobile search bar
- 
-   const handleSearchClick = () => {
-     setShowSearchBar(!showSearchBar); // Toggle search bar visibility
-   };
+  // Manage search query and visibility of search bar// State to store search input
+  const [showSearchBar, setShowSearchBar] = useState(false); // Toggle for mobile search bar
+
+  const handleSearchClick = () => {
+    setShowSearchBar(!showSearchBar); // Toggle search bar visibility
+  };
 
   // Handle menu toggle
   const [showNav, setShowNav] = useState(false);
@@ -74,23 +74,24 @@ const MobileNavbar = ({ isDark, setIsDark, onSearch  }) => {
           </p>
         </div>
         <div className="searchbar">
-  <form onSubmit={handleSearchSubmit}>
-    <div className="searchbar-with-icon">
-      <input
-        type="text"
-        placeholder="Search products"
-        value={searchQuery}
-        onChange={(e) => setSearchQuery(e.target.value)} // Update the state with input value
-      />
-      <div className="voice-icon-container">
-        <FontAwesomeIcon icon={faMicrophone} className="voice-icon"/>
-      </div>
-      <button type="button" onClick={handleSearchSubmit}>
-        <FontAwesomeIcon icon={faSearch} className="newsearch-icon" /> Search
-      </button>
-    </div>
-  </form>
-</div>
+          <form onSubmit={handleSearchSubmit}>
+            <div className="searchbar-with-icon">
+              <input
+                type="text"
+                placeholder="Search products"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)} // Update the state with input value
+              />
+              <div className="voice-icon-container">
+                <FontAwesomeIcon icon={faMicrophone} className="voice-icon" />
+              </div>
+              <button type="button" onClick={handleSearchSubmit}>
+                <FontAwesomeIcon icon={faSearch} className="newsearch-icon" />{" "}
+                Search
+              </button>
+            </div>
+          </form>
+        </div>
         <div className="d-navicons">
           <FontAwesomeIcon icon={faUser} onClick={handleUserIconClick} />
           <Link to="wishlist">
@@ -137,25 +138,25 @@ const MobileNavbar = ({ isDark, setIsDark, onSearch  }) => {
             onClick={handleMenuClick}
             className="menu-bar"
           />
-                <div className="searchbar">
-  <form onSubmit={handleSearchSubmit}>
-    <div className="searchbar-with-icon">
-      <input
-        type="text"
-        placeholder="Search products"
-        value={searchQuery}
-        onChange={(e) => setSearchQuery(e.target.value)} // Update the state with input value
-      />
-      <div className="voice-icon-container">
-        <FontAwesomeIcon icon={faMicrophone} className="voice-icon" />
-      </div>
-      <button type="button" onClick={handleSearchSubmit}>
-        <FontAwesomeIcon icon={faSearch} className="newsearch-icon" />
-        <span className="search-text">Search</span>
-      </button>
-    </div>
-  </form>
-</div>
+          <div className="searchbar">
+            <form onSubmit={handleSearchSubmit}>
+              <div className="searchbar-with-icon">
+                <input
+                  type="text"
+                  placeholder="Search products"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)} // Update the state with input value
+                />
+                <div className="voice-icon-container">
+                  <FontAwesomeIcon icon={faMicrophone} className="voice-icon" />
+                </div>
+                <button type="button" onClick={handleSearchSubmit}>
+                  <FontAwesomeIcon icon={faSearch} className="newsearch-icon" />
+                  <span className="search-text">Search</span>
+                </button>
+              </div>
+            </form>
+          </div>
 
           <Link to="/cart">
             <FontAwesomeIcon icon={faCartShopping} />
@@ -193,45 +194,42 @@ const MobileNavbar = ({ isDark, setIsDark, onSearch  }) => {
 
         <div className="mobile-icons">
           <div className="m1">
-          {isOnShopPage ? (
-            <Link to="/" className="mn-link">
-              <div className="m-bottom-icons">
-                <FontAwesomeIcon icon={faHome} className="m-icon" />
-                <p className="ic">Home</p>
-              </div>
-            </Link>
-          ) : (
-            <Link to="/shop" className="mn-link">
-              <div className="m-bottom-icons">
-                <IoStorefrontSharp className="m-icon" />
-                <p className="ic">Shop</p>
-              </div>
-            </Link>
-          )}
+            {isOnShopPage ? (
+              <Link to="/" className="mn-link">
+                <div className="m-bottom-icons">
+                  <FontAwesomeIcon icon={faHome} className="m-icon" />
+                  <p className="ic">Home</p>
+                </div>
+              </Link>
+            ) : (
+              <Link to="/shop" className="mn-link">
+                <div className="m-bottom-icons">
+                  <IoStorefrontSharp className="m-icon" />
+                  <p className="ic">Shop</p>
+                </div>
+              </Link>
+            )}
           </div>
 
           <div className="m2">
-          <Link to="/wishlist" className="mn-link">
-            <div className="m-bottom-icons">
-              <FontAwesomeIcon icon={faHeart} className="m-icon" />
-              <p className="ic">Wishlist</p>
-            </div>
-          </Link>
+            <Link to="/wishlist" className="mn-link">
+              <div className="m-bottom-icons">
+                <FontAwesomeIcon icon={faHeart} className="m-icon" />
+                <p className="ic">Wishlist</p>
+              </div>
+            </Link>
           </div>
 
           <div className="m3">
-          <Link className="mn-link" onClick={handleSearchClick}>
-            <div className="m-bottom-icons">
-              <FontAwesomeIcon
-                icon={faSearch}
-                className="m-icon"
-              />
-              <p className="ic">Search</p>
-            </div>
-          </Link>
+            <Link className="mn-link" onClick={handleSearchClick}>
+              <div className="m-bottom-icons">
+                <FontAwesomeIcon icon={faSearch} className="m-icon" />
+                <p className="ic">Search</p>
+              </div>
+            </Link>
           </div>
 
-            <div className="m4">
+          <div className="m4">
             <Link to="/account" className="mn-link">
               <div className="m-bottom-icons">
                 <FontAwesomeIcon
@@ -242,17 +240,16 @@ const MobileNavbar = ({ isDark, setIsDark, onSearch  }) => {
                 <p className="ic">Account</p>
               </div>
             </Link>
-            </div>
-
-          <div className="m5">
-          <Link to="/cart" className="mn-link">
-            <div className="m-bottom-icons">
-              <FontAwesomeIcon icon={faCartShopping} className="m-icon" />
-              <p className="ic">Cart</p>
-            </div>
-          </Link>
           </div>
 
+          <div className="m5">
+            <Link to="/cart" className="mn-link">
+              <div className="m-bottom-icons">
+                <FontAwesomeIcon icon={faCartShopping} className="m-icon" />
+                <p className="ic">Cart</p>
+              </div>
+            </Link>
+          </div>
         </div>
 
         {showSearchBar && (
