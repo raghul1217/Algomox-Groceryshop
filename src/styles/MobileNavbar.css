@@ -143,6 +143,98 @@
   }
 
 
+
+/* Styling the container for the search bar */
+.searchbar-with-icon {
+  position: relative;
+  max-width: 600px;
+  margin: 0px auto;
+  display: flex;
+  align-items: center;
+  border: 2px solid var(--secondarybackground);
+  border-radius: 5px; /* Rectangular shape with slightly rounded corners */
+}
+
+/* Input styling */
+
+.searchbar{
+  width: 100%;
+}
+
+.searchbar-with-icon input {
+  width: 100%;
+  padding: 10px 15px;
+  padding-left: 10px; /* Add padding for the icon */
+  border: none;
+  background-color: var(--whitewhite);
+  font-size: 14px;
+  color: var(--darktext);
+  outline: none;
+  border-radius: 2px 0 0 2px; /* Rectangular corners */
+  transition: all 0.3s ease;
+}
+
+/* Button styling */
+.searchbar-with-icon button {
+  padding: 10px 10px;
+  background-color: var(--primarycolor);
+  color: white;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 0 5px 5px 0; /* Rectangular corners */
+  display: flex;
+  align-items: center;
+}
+
+/* Icon inside the search button */
+.searchbar-with-icon .newsearch-icon {
+  font-size: 16px;
+  margin-right: 8px; /* Space between icon and text */
+}
+
+/* Button hover effect */
+.searchbar-with-icon button:hover {
+  background-color: var(--navbar1);
+}
+
+/* Focus effect for the input */
+.searchbar-with-icon input:focus {
+  border-color: var(--primarycolor);
+  box-shadow: 0 0 10px rgba(99, 76, 159, 0.4);
+}
+
+/* Focus effect for the button */
+.searchbar-with-icon button:focus {
+  outline: none;
+}
+
+.voice-icon-container {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  right: 100px;
+  transform: translateY(-50%); /* Center it vertically */
+  cursor: pointer;
+}
+
+/* Voice icon styling */
+.voice-icon {
+  font-size: 18px;
+  color: var(--primarycolor);
+  transition: color 0.3s ease;
+} 
+
+
+.search-text {
+  display: inline; /* Default behavior for larger screens */
+}
+
+
+  
+
+
   
   
   /* Media Queries for Mobile View */
@@ -168,6 +260,59 @@
       display: flex;
       justify-content: space-between;
     }
+
+    .mobile-icons{
+      display: flex;
+    }
+
+    .m1, .m2, .m3, .m4, .m5{
+      flex: 1;
+    }
+
+    .m5{
+      padding-right: 10px;
+    }
+
+    .searchbar{
+      width: 70%;
+    }
+
+    .searchbar-with-icon input{
+      padding: 8px 13px;
+      padding-left: 8px;
+      font-size: 13px;
+     }
+
+    .searchbar-with-icon button{
+      padding: 8px 8px;
+      font-size: 13px;
+    }
+
+    .searchbar-with-icon .newsearch-icon {
+      font-size: 12px;
+      margin-right: 4px; /* Space between icon and text */
+    }
+
+    .search-text {
+      display: none; /* Hide search text on mobile */
+    }
+
+    .voice-icon-container{
+      right: 40px;
+    }
+
+    .voice-icon{
+      font-size: 16px;
+    }
+
+    .searchbar-with-icon button{
+      padding: 8px 10px;
+    }
+
+    .searchbar-with-icon input{
+      padding: 8px 15px;
+    }
+
   }
 
 

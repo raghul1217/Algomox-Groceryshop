@@ -7,6 +7,7 @@
     background-color: var(--primarybackground);
     font-family: Arial, sans-serif;
     padding: 40px;
+    padding-top: 150px;
 }
 
 .ap-welcome-message {

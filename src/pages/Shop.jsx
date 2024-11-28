@@ -1,8 +1,13 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import "../styles/Shop.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCartShopping, faHeart, faEye } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCartShopping,
+  faHeart,
+  faEye,
+} from "@fortawesome/free-solid-svg-icons";
+import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 
 // Import your product images
 import potato4 from "../assets/products/vegtables/potato3-resized.png";
@@ -31,22 +36,21 @@ const Shop = () => {
     };
   });
 
-  // State for filters, pagination, and budget
+  const [isFilterOpen, setIsFilterOpen] = useState(false);
+  const toggleFilter = () => setIsFilterOpen(!isFilterOpen);
+
   const [selectedCategories, setSelectedCategories] = useState([]);
   const [selectedBrands, setSelectedBrands] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState(products);
   const [currentPage, setCurrentPage] = useState(1);
   const productsPerPage = 20;
 
-  // Budget States
   const [budget, setBudget] = useState(0);
   const [cartTotal, setCartTotal] = useState(0);
 
-  // Categories and Brands
   const categories = ["Fruits", "Vegetables", "Dairy", "Snacks"];
   const brands = ["Nestle", "Parle", "Ooty Products", "Coca-Cola"];
 
-  // Filter Handlers
   const handleCategoryChange = (category) => {
     const updatedCategories = selectedCategories.includes(category)
       ? selectedCategories.filter((c) => c !== category)
@@ -73,13 +77,11 @@ const Shop = () => {
     }
 
     if (brands.length > 0) {
-      filtered = filtered.filter((product) =>
-        brands.includes(product.brand)
-      );
+      filtered = filtered.filter((product) => brands.includes(product.brand));
     }
 
     setFilteredProducts(filtered);
-    setCurrentPage(1); 
+    setCurrentPage(1);
   };
 
   // Pagination Logic
@@ -118,7 +120,9 @@ const Shop = () => {
   // Add to Wishlist
   const addToWishlist = (product) => {
     const existingWishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
-    const isProductInWishlist = existingWishlist.some((item) => item.id === product.id);
+    const isProductInWishlist = existingWishlist.some(
+      (item) => item.id === product.id
+    );
 
     if (!isProductInWishlist) {
       const updatedWishlist = [...existingWishlist, product];
@@ -129,16 +133,32 @@ const Shop = () => {
     }
   };
 
+  // Effect to handle search filtering from URL
+  const location = useLocation();
+  useEffect(() => {
+    const queryParams = new URLSearchParams(location.search);
+    const searchQuery = queryParams.get("search")?.toLowerCase() || "";
+
+    if (searchQuery) {
+      const filtered = products.filter((product) =>
+        product.name.toLowerCase().includes(searchQuery)
+      );
+      setFilteredProducts(filtered);
+    } else {
+      setFilteredProducts(products); // If no search, show all products
+    }
+  }, [location.search]);
+
   return (
     <div className="shop-container">
-
-
       {/* Left Section - Filters */}
+      {/* The commented-out filter section can be restored if necessary */}
+
       <div className="d-shop-left">
         <div className="filter-section">
-            <div className="budget-input">
+          <div className="budget-input">
             <label>
-              <h3>Enter your budget:</h3>
+              <h3>Budget:</h3>
               <input
                 // type="number"
                 value={budget}
@@ -148,37 +168,102 @@ const Shop = () => {
             </label>
             <p>Cart Total: ₹{cartTotal}</p>
           </div>
-          <h3>Categories</h3>
-          <ul>
-            {categories.map((category) => (
-              <li key={category}>
-                <label>
-                  <input
-                    type="checkbox"
-                    onChange={() => handleCategoryChange(category)}
-                  />
-                  {category}
-                </label>
-              </li>
-            ))}
-          </ul>
-
-          <h3>Brands</h3>
-          <ul>
-            {brands.map((brand) => (
-              <li key={brand}>
-                <label>
-                  <input
-                    type="checkbox"
-                    onChange={() => handleBrandChange(brand)}
-                  />
-                  {brand}
-                </label>
-              </li>
-            ))}
-          </ul>
+          <div className="filter2">
+            <h3>Categories</h3>
+            <ul>
+              {categories.map((category) => (
+                <li key={category}>
+                  <label>
+                    <input
+                      type="checkbox"
+                      onChange={() => handleCategoryChange(category)}
+                    />
+                    {category}
+                  </label>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="filter3">
+            <h3>Brands</h3>
+            <ul>
+              {brands.map((brand) => (
+                <li key={brand}>
+                  <label>
+                    <input
+                      type="checkbox"
+                      onChange={() => handleBrandChange(brand)}
+                    />
+                    {brand}
+                  </label>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
+
+       <div className="m-shop-left">
+        <div className="m-filter-head-div">
+          <div className="filter-header" onClick={toggleFilter}>
+            <h3>Filter</h3>
+            <FontAwesomeIcon icon={faCaretDown} />
+          </div>
+          <div className="m-budget-input">
+            <label>
+              <h3>Budget:</h3>
+              <input
+                // type="number"
+                value={budget}
+                onChange={(e) => setBudget(Number(e.target.value))}
+                placeholder="Enter budget..."
+              />
+            </label>
+            <p>Cart Total: ₹{cartTotal}</p>
+          </div>
+        </div>
+        <div className="m-filter-section">
+          {isFilterOpen && (
+            <div className="m-filter-content">
+              <div className="m-filter2">
+                <h3>Categories</h3>
+                <ul>
+                  {categories.map((category) => (
+                    <li key={category}>
+                      <label>
+                        <input
+                          type="checkbox"
+                          onChange={() => handleCategoryChange(category)}
+                        />
+                        {category}
+                      </label>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="m-filter3">
+                <h3>Brands</h3>
+                <ul>
+                  {brands.map((brand) => (
+                    <li key={brand}>
+                      <label>
+                        <input
+                          type="checkbox"
+                          onChange={() => handleBrandChange(brand)}
+                        />
+                        {brand}
+                      </label>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          )}
+        </div>
+      </div> 
+ 
+
 
       {/* Right Section - Products */}
       <div className="d-shop-right">

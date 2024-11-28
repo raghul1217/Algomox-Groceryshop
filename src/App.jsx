@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import useLocalStorage from "use-local-storage";
 import Home from "./pages/Home";
@@ -14,14 +14,19 @@ import MobileNavbar from "./components/MobileNavbar";
 
 function App() {
   const [isDark, setIsDark] = useLocalStorage("isDark", false);
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const handleSearch = (query) => {
+    setSearchTerm(query);
+  };
 
   return (
     <div data-theme={isDark ? "dark" : "light"}>
       <Router>
-        <MobileNavbar isDark={isDark} setIsDark={setIsDark}/>
+        <MobileNavbar isDark={isDark} setIsDark={setIsDark} onSearch={handleSearch}/>
         <Routes>
           <Route path="/" element={<Home isDark={isDark} />} />
-          <Route path="/shop" element={<Shop />} />
+          <Route path="/shop" element={<Shop searchQuery={searchTerm}/>} />
           <Route path="/products/:id" element={<ProductDetails />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/wishlist" element={<Wishlist />} />

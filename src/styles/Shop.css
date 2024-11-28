@@ -8,7 +8,7 @@
     padding: 20px 60px;
     background-color: var(--primarybackground);
     margin-top: -8px;
-    display: none;
+
   }
   
   /* Left Filters */
@@ -37,6 +37,33 @@
     font-size: 14px;
     cursor: pointer;
   }
+
+  .m-d-shop-left {
+    width: 25%;
+    padding: 20px;
+    background-color: var(--secondarybackground);
+  }
+  
+  .m-filter-section h3 {
+    color: var(--primarycolor);
+    margin-bottom: 10px;
+  }
+  
+  .m-filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .m-filter-section ul li {
+    margin: 8px 0;
+  }
+  
+  .m-filter-section label {
+    color: var(--darktext);
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
   
   /* Right Products */
   .d-shop-right {
@@ -64,6 +91,7 @@
     grid-template-columns: repeat(6, 1fr);
     gap: 15px;
     padding: 10px 60px;
+    font-family: "Montserrat", sans-serif;
     /* display: none; */
   }
 
@@ -239,53 +267,140 @@
   .budget-input h3{
     font-size: 18px;
   }
+
+  .m-shop-left{
+    display: none;
+  }
   
 
 
-  @media (max-width: 480px){
-
-    .pp-products-grid{
-      padding: 10px;
+  @media (max-width: 480px) {
+    .shop-container {
+      padding: 0; /* Remove padding to prevent overflow */
+      flex-direction: column; /* Stack left and right sections */
+      overflow: hidden; /* Prevent scrollbar on the main container */
+    }
+  
+    .d-shop-left {
+      width: 100%; /* Full width for the left section */
+      padding: 10px; 
+      display: none;/* Add some padding for aesthetics */
+    }
+  
+    .d-shop-right {
+      width: 100%; /* Full width for the right section */
+      height: auto; /* Allow height to adjust based on content */
+      overflow-y: auto; /* Enable vertical scrolling only if necessary */
+      flex-grow: 1; /* Allow this section to grow and fill available space */
+    }
+  
+    .products-grid {
+      display: grid; /* Ensure grid layout */
+      grid-template-columns: repeat(2, 1fr); /* Two columns on mobile */
+      gap: 8px; /* Maintain gap between products */
+    }
+  
+    .product-card {
+      padding: 8px; /* Adjust padding for smaller screens */
+      height: auto; /* Allow height to adjust based on content */
+      box-sizing: border-box; /* Ensure padding is included in height */
+    }
+  
+    .product-image {
+      width: 100px; /* Adjust image size for mobile */
+      height: 90px; /* Maintain aspect ratio */
+    }
+  
+    .product-category {
+      font-size: 10px; /* Adjust font size for mobile */
+    }
+  
+    .product-name {
+      font-size: 14px; /* Adjust font size for mobile */
+    }
+  
+    .product-details1 {
+      font-size: 12px; /* Adjust font size for mobile */
+      padding-top: 8px; /* Adjust padding for mobile */
+    }
+  
+    .add-to-cart-btn {
+      padding: 6px 10px; /* Adjust button padding for mobile */
+      border-radius: 3px; /* Adjust border radius for mobile */
+    }
+  
+    .budget-input {
+      padding-bottom: 10px; /* Maintain padding for budget input */
+    }
+  
+    .budget-input input {
+      width: 80%; /* Adjust input width for better fit */
     }
 
-    .products-grid{
-      gap: 8px;
+    .m-filter-content{
+      display: flex;
+      flex-direction: row;
     }
 
-     .product-card{
-       padding: 8px;
-       height: 200px;
-     }
+    /* budget input */
+    .m-shop-left{
+      padding: 15px 10px;
+    }
 
-     .product-brand{
+
+    .m-budget-input input{
+      padding: 3px 8px;
       font-size: 14px;
-     }
-
-     .product-image{
-      width: 100px;
-      height: 90px;
-     }
-
-     .product-category{
-      font-size: 10px;
-     }
-
-     .product-name{
-      font-size: 14px;
-     }
-
-     .product-details1{
-      font-size: 12px;
-      padding-top: 8px;
-     }
-
-     .add-to-cart-btn{
-      padding: 6px 10px;
       border-radius: 3px;
-     }
+      width: 40%;
+    }
 
-     .popular-products-container h2{
-      padding: 0;
-      padding: 30px 0 10px 10px;
-     }
+    .m-budget-input h3{
+      font-size: 14px;
+    }
+
+    .m-filter2, .filter3{
+      flex: 1;
+    }
+
+    .m-filter2, .filter3 h3{
+      font-size: 14px;
+    }
+
+    .filter{
+      flex: 2;
+    }
+
+    .m-shop-left{
+      display: block;
+    }
+
+
+    /* filter */
+    .filter-header{
+      display: flex;
+      gap: 3px;
+      flex: 3;
+    }
+
+    .m-filter-head-div{
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .m-budget-input{
+      display: flex;
+      justify-content: right;
+      align-items: right;
+      flex-direction: column;
+      padding-left: 150px;
+    }
+
+    .m-budget-input label{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+    }
+
   }

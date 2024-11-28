@@ -15,6 +15,7 @@ import Footer from "../components/Footer";
 
 
 const Home = ({ isDark }) => {
+  
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides = [
