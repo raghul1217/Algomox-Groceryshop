@@ -33,6 +33,29 @@ import snacks3 from "../assets/products/snacks/snacks2-1.png";
 const PopularProducts = () => {
   // Predefined Product Data
   const productData = [
+    {
+      name: "Fresh Organic Bananas, Bunch",
+      image: fruit4,
+      category: "Fruits",
+      brand: "Dmart",
+      price: 120,
+    },
+    //2
+    {
+      name: "Schweppes Diet Ginger - pack of 3",
+      image: juice1,
+      category: "juice",
+      brand: "Nestle",
+      price: 50,
+    },
+    //3
+    {
+      name: "Fresh Skinless Atlantic Salmon – 2pk_10oz",
+      image: seafood1,
+      category: "Seafoods",
+      brand: "Ak Provisions",
+      price: 240,
+    },
     //4
     {
       name: " Black Iced Tea Drink – 52 fl oz",
@@ -55,29 +78,6 @@ const PopularProducts = () => {
       image: diary1,
       category: "Dairy",
       brand: "Ram stores",
-      price: 120,
-    },
-    //7
-    {
-      name: "Kitchen FD Sliced Strawberries – 1.08lb",
-      image: fruit1,
-      category: "Fruits",
-      brand: "Dmart",
-      price: 150,
-    },
-    //8
-    {
-      name: "Tillamook Cheddar Cheese Loaf – 32oz",
-      image: diary4,
-      category: "Dairy",
-      brand: "Ram stores",
-      price: 120,
-    },
-    {
-      name: "Fresh Organic Bananas, Bunch",
-      image: fruit4,
-      category: "Fruits",
-      brand: "Dmart",
       price: 120,
     },
   ];
