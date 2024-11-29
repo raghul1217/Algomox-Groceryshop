@@ -6,16 +6,80 @@ import { faCartShopping, faHeart, faEye } from "@fortawesome/free-solid-svg-icon
 
 // Import your product images
 import potato4 from "../assets/products/vegtables/potato3-resized.png";
+// importing juices:
+import juice1 from "../assets/products/juices/juice-1.png";
+import juice31 from "../assets/products/juices/juice3-1.png";
+
+//importing seafoods:
+import seafood1 from "../assets/products/meats and seafoods/fish1-1.png";
+
+//importing meats:
+import meat1 from "../assets/products/meats and seafoods/meat1-1.png";
+
+//importing diary products:
+import diary1 from "../assets/products/diary/diary1-1.png"
+import diary4 from "../assets/products/diary/diary2-1.png"
+
+//importing fruits:
+import fruit1 from "../assets/products/fruits/fruit1-2.png";
+import fruit4 from "../assets/products/fruits/fruit2-1.png";
+
+//importing snacks:
+import snacks1 from "../assets/products/snacks/snacks1-1.png";
+import snacks3 from "../assets/products/snacks/snacks2-1.png";
+
+
 
 const PopularProducts = () => {
   // Predefined Product Data
   const productData = [
-    { name: "Apple", image: potato4, category: "Fruits", brand: "Ooty Products", price: 150 },
-    { name: "Banana", image: potato4, category: "Fruits", brand: "Nestle", price: 50 },
-    { name: "Chips", image: potato4, category: "Snacks", brand: "Parle", price: 100 },
-    { name: "Milk", image: potato4, category: "Dairy", brand: "Coca-Cola", price: 120 },
-    { name: "Drinks", image: potato4, category: "Dairy", brand: "Coca-Cola", price: 120 },
-    { name: "Snacks", image: potato4, category: "Dairy", brand: "Coca-Cola", price: 120 },
+    //4
+    {
+      name: " Black Iced Tea Drink – 52 fl oz",
+      image: juice31,
+      category: "juice",
+      brand: "Dmart",
+      price: 90,
+    },
+    //5
+    {
+      name: "USDA Choice Angus Beef Stew Meat – 1lb",
+      image: meat1,
+      category: "Meats",
+      brand: "Dmart",
+      price: 120,
+    },
+    //6
+    {
+      name: "Caramel Apple Soft Caramels – 8.57oz",
+      image: diary1,
+      category: "Dairy",
+      brand: "Ram stores",
+      price: 120,
+    },
+    //7
+    {
+      name: "Kitchen FD Sliced Strawberries – 1.08lb",
+      image: fruit1,
+      category: "Fruits",
+      brand: "Dmart",
+      price: 150,
+    },
+    //8
+    {
+      name: "Tillamook Cheddar Cheese Loaf – 32oz",
+      image: diary4,
+      category: "Dairy",
+      brand: "Ram stores",
+      price: 120,
+    },
+    {
+      name: "Fresh Organic Bananas, Bunch",
+      image: fruit4,
+      category: "Fruits",
+      brand: "Dmart",
+      price: 120,
+    },
   ];
 
   // Generate 50 products from the predefined data
@@ -108,14 +172,18 @@ const PopularProducts = () => {
             <div className="product-details1">
               <p className="product-price">₹{product.price}</p>
               <button
-                className={`add-to-cart-btn ${
-                  cartTotal + product.price > budget ? "exceed-budget" : ""
-                }`}
-                onClick={() => addToCart(product)}
-                disabled={cartTotal + product.price > budget}
-              >
-                <FontAwesomeIcon icon={faCartShopping} /> Add
-              </button>
+      className={`add-to-cart-btn ${
+        budget > 0 && cartTotal + product.price > budget ? "exceed-budget" : ""
+      }`}
+      onClick={(e) => {
+        // Prevent navigation when clicking the button
+        e.preventDefault();
+        addToCart(product);
+      }}
+      disabled={budget > 0 && cartTotal + product.price > budget}
+    >
+      <FontAwesomeIcon icon={faCartShopping} /> Add
+    </button>
             </div>
           </div>
         ))}

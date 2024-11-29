@@ -15,6 +15,11 @@ import {
   faTelegram,
 } from "@fortawesome/free-brands-svg-icons";
 
+import gpay from "../assets/products/payments/gpay.png";
+import paytm from "../assets/products/payments/paytm.png";
+import paypal from "../assets/products/payments/paypal.png";
+import visa from "../assets/products/payments/visa.png";
+
 const Footer = () => {
   return (
     <footer className="footer-container">
@@ -78,11 +83,12 @@ const Footer = () => {
             </button>
           </div>
           <button className="subscribe-button">Subscribe</button>
-          <div className="payment-options">
-            <img src="/path/to/visa.png" alt="Visa" />
-            <img src="/path/to/debit-card.png" alt="Debit Card" />
-            <img src="/path/to/credit-card.png" alt="Credit Card" />
-          </div>
+          {/* <div className="payment-options">
+            <img src={visa} alt="Visa" />
+            <img src={paypal} alt="paypal" />
+            <img src={gpay} alt="gpay" />
+            <img src={paytm} alt="paytm" />
+          </div> */}
         </div>
       </div>
 

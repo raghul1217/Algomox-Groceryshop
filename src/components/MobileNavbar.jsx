@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBox } from "@fortawesome/free-solid-svg-icons";
+
 import {
   faUser,
   faCartShopping,
@@ -17,6 +19,7 @@ import { AiOutlineBars } from "react-icons/ai";
 import { FiFilter } from "react-icons/fi";
 import { MdCategory } from "react-icons/md";
 import { FaFolderOpen } from "react-icons/fa";
+import logo from "../assets/logo.png";
 
 const MobileNavbar = ({ isDark, setIsDark, onSearch }) => {
   const navigate = useNavigate();
@@ -70,6 +73,7 @@ const MobileNavbar = ({ isDark, setIsDark, onSearch }) => {
       <div className="nav-line1 desktop">
         <div className="d-brand">
           <p>
+            <img src={logo} alt="logo" className="logo-class"/>
             Grocer<span>Mart</span>
           </p>
         </div>
@@ -125,7 +129,7 @@ const MobileNavbar = ({ isDark, setIsDark, onSearch }) => {
           </ul>
         </div>
         <div className="d-navright">
-          <button id="d-navsigup">Signup</button>
+          <Link to="/signup" style={{textDecoration:"none"}}><button id="d-navsigup">Signup</button></Link>
           <Toggle isChecked={isDark} handleChange={() => setIsDark(!isDark)} />
         </div>
       </div>
@@ -150,17 +154,20 @@ const MobileNavbar = ({ isDark, setIsDark, onSearch }) => {
                 <div className="voice-icon-container">
                   <FontAwesomeIcon icon={faMicrophone} className="voice-icon" />
                 </div>
+                <div >
                 <button type="button" onClick={handleSearchSubmit}>
                   <FontAwesomeIcon icon={faSearch} className="newsearch-icon" />
                   <span className="search-text">Search</span>
                 </button>
+                </div>
               </div>
             </form>
           </div>
 
-          <Link to="/cart">
-            <FontAwesomeIcon icon={faCartShopping} />
-          </Link>
+          <Toggle
+                isChecked={isDark}
+                handleChange={() => setIsDark(!isDark)}
+              />
         </div>
 
         {showNav && (
@@ -183,11 +190,8 @@ const MobileNavbar = ({ isDark, setIsDark, onSearch }) => {
               </li>
             </ul>
             <div className="d-navright">
-              <button id="d-navsigup">Signup</button>
-              <Toggle
-                isChecked={isDark}
-                handleChange={() => setIsDark(!isDark)}
-              />
+              <Link to="/signup"><button id="d-navsigup">Signup</button></Link>
+              
             </div>
           </div>
         )}
@@ -220,15 +224,6 @@ const MobileNavbar = ({ isDark, setIsDark, onSearch }) => {
             </Link>
           </div>
 
-          <div className="m3">
-            <Link className="mn-link" onClick={handleSearchClick}>
-              <div className="m-bottom-icons">
-                <FontAwesomeIcon icon={faSearch} className="m-icon" />
-                <p className="ic">Search</p>
-              </div>
-            </Link>
-          </div>
-
           <div className="m4">
             <Link to="/account" className="mn-link">
               <div className="m-bottom-icons">
@@ -241,6 +236,17 @@ const MobileNavbar = ({ isDark, setIsDark, onSearch }) => {
               </div>
             </Link>
           </div>
+
+          <div className="m3">
+            <Link className="mn-link">
+              <div className="m-bottom-icons">
+                <FontAwesomeIcon icon={faBox} className="m-icon"  />
+                <p className="ic">Orders</p>
+              </div>
+            </Link>
+          </div>
+
+
 
           <div className="m5">
             <Link to="/cart" className="mn-link">

@@ -21,6 +21,7 @@
   --purplewhite: rgb(99,76,159);
    --grey: rgb(92, 91, 91);
    --whitewhite: rgb(241, 240, 240);
+   --purpleorange: rgb(99,76,159);
 }
 
 
@@ -43,7 +44,7 @@
   --darktext: rgba(255, 255, 255, 0.745);
   --purplewhite: rgba(255, 255, 255, 0.745);
   --grey: rgb(63, 63, 63);
-
+  --purpleorange: rgb(255, 172, 5);
 }
 
 

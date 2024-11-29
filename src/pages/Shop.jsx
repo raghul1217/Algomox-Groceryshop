@@ -11,51 +11,138 @@ import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 
 // Import your product images
 import potato4 from "../assets/products/vegtables/potato3-resized.png";
+import potato5 from "../assets/products/vegtables/potato2.png";
+
+// importing juices:
+import juice1 from "../assets/products/juices/juice-1.png";
+import juice31 from "../assets/products/juices/juice3-1.png";
+
+//importing seafoods:
+import seafood1 from "../assets/products/meats and seafoods/fish1-1.png";
+
+//importing meats:
+import meat1 from "../assets/products/meats and seafoods/meat1-1.png";
+
+//importing diary products:
+import diary1 from "../assets/products/diary/diary1-1.png"
+import diary4 from "../assets/products/diary/diary2-1.png"
+
+//importing fruits:
+import fruit1 from "../assets/products/fruits/fruit1-2.png";
+import fruit4 from "../assets/products/fruits/fruit2-1.png";
+
+//importing snacks:
+import snacks1 from "../assets/products/snacks/snacks1-1.png";
+import snacks3 from "../assets/products/snacks/snacks2-1.png";
+
+
 
 const Shop = () => {
-  // Predefined Product Data with Prices
+  
   const productData = [
+    //1
     {
-      name: "Apple",
-      image: potato4,
+      name: "Fresh Organic Bananas, Bunch",
+      image: fruit4,
       category: "Fruits",
-      brand: "Ooty Products",
-      price: 150,
+      brand: "Dmart",
+      price: 120,
     },
+    //2
     {
-      name: "Banana",
-      image: potato4,
-      category: "Fruits",
+      name: "Schweppes Diet Ginger - pack of 3",
+      image: juice1,
+      category: "juice",
       brand: "Nestle",
       price: 50,
     },
+    //3
     {
-      name: "Chips",
+      name: "Fresh Skinless Atlantic Salmon – 2pk_10oz",
+      image: seafood1,
+      category: "Seafoods",
+      brand: "Ak Provisions",
+      price: 240,
+    },
+    //4
+    {
+      name: " Black Iced Tea Drink – 52 fl oz",
+      image: juice31,
+      category: "juice",
+      brand: "Dmart",
+      price: 90,
+    },
+    //5
+    {
+      name: "USDA Choice Angus Beef Stew Meat – 1lb",
+      image: meat1,
+      category: "Meats",
+      brand: "Dmart",
+      price: 120,
+    },
+    //6
+    {
+      name: "Caramel Apple Soft Caramels – 8.57oz",
+      image: diary1,
+      category: "Dairy",
+      brand: "Ram stores",
+      price: 120,
+    },
+    //7
+    {
+      name: "Kitchen FD Sliced Strawberries – 1.08lb",
+      image: fruit1,
+      category: "Fruits",
+      brand: "Dmart",
+      price: 150,
+    },
+    //8
+    {
+      name: "Tillamook Cheddar Cheese Loaf – 32oz",
+      image: diary4,
+      category: "Dairy",
+      brand: "Ram stores",
+      price: 120,
+    },
+    //9
+    {
+      name: "Yellow Potatoes Whole Fresh, 5lb Bag",
       image: potato4,
+      category: "Vegetables",
+      brand: "smart dealers",
+      price: 150,
+    },
+    //10
+    {
+      name: "Caramel Apple Soft Caramels – 8.57oz",
+      image: snacks1,
       category: "Snacks",
-      brand: "Parle",
-      price: 100,
-    },
-    {
-      name: "Milk",
-      image: potato4,
-      category: "Dairy",
-      brand: "Coca-Cola",
+      brand: "Dmart",
       price: 120,
     },
+    //11
     {
-      name: "Drinks",
-      image: potato4,
+      name: "Caramel Apple Soft Caramels – 8.57oz",
+      image: diary1,
       category: "Dairy",
-      brand: "Coca-Cola",
+      brand: "Dmart",
       price: 120,
     },
+    //12
     {
-      name: "Snacks",
-      image: potato4,
+      name: "Caramel Apple Soft Caramels – 8.57oz",
+      image: diary1,
       category: "Dairy",
-      brand: "Coca-Cola",
+      brand: "Ram stores",
       price: 120,
+    },
+    //13
+    {
+      name: "Crispy Thin Crust Pizza, 15.5oz",
+      image: snacks3,
+      category: "Snacks",
+      brand: "Dmart",
+      price: 140,
     },
   ];
 
@@ -84,8 +171,8 @@ const Shop = () => {
   const [budget, setBudget] = useState(0);
   const [cartTotal, setCartTotal] = useState(0);
 
-  const categories = ["Fruits", "Vegetables", "Dairy", "Snacks"];
-  const brands = ["Nestle", "Parle", "Ooty Products", "Coca-Cola"];
+  const categories = ["Fruits", "Vegetables", "Dairy", "Snacks", "juice", "Meats", "Seafoods"];
+  const brands = ["Ak Provisions", "smart dealers", "Dmart", "Ram stores"];
 
   const handleCategoryChange = (category) => {
     const updatedCategories = selectedCategories.includes(category)
@@ -222,7 +309,7 @@ const Shop = () => {
             </ul>
           </div>
           <div className="filter3">
-            <h3>Brands</h3>
+            <h3>Dealers</h3>
             <ul>
               {brands.map((brand) => (
                 <li key={brand}>
@@ -244,7 +331,7 @@ const Shop = () => {
         <div className="m-filter-head-div">
           <div className="filter-header" onClick={toggleFilter}>
             <h3>Filter</h3>
-            <FontAwesomeIcon icon={faCaretDown} />
+            <FontAwesomeIcon icon={faCaretDown} className="filter-icon"/>
           </div>
           <div className="m-budget-input">
             <label>
@@ -312,7 +399,7 @@ const Shop = () => {
                   addToWishlist(product);
                 }}
               >
-                <FontAwesomeIcon icon={faHeart} />
+                <FontAwesomeIcon icon={faHeart} className="faheart"/>
               </div>
               <div className="product-image-wrapper">
                 <img

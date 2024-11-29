@@ -12,6 +12,7 @@ import darkc2 from "../assets/dark-c3.png";
 import darkc3 from "../assets/dark-c4.png";
 import PopularProducts from "../components/PopularProducts";
 import Footer from "../components/Footer";
+import { Link, useLocation } from "react-router-dom";
 
 
 const Home = ({ isDark }) => {
@@ -61,39 +62,62 @@ const Home = ({ isDark }) => {
           <div className="categories-dropdown">
             <h3>Categories</h3>
             <ul>
+              <Link to="/shop" style={{textDecoration: "none"}}>
               <li>
                 <FontAwesomeIcon icon={faAppleAlt} /> Fruits
               </li>
+              </Link>
+              <Link to="/shop" style={{textDecoration: "none"}}>
               <li>
                 <FontAwesomeIcon icon={faCarrot} /> Vegetables
               </li>
+              </Link>
+              <Link to="/shop" style={{textDecoration: "none"}}>
               <li>
                 <FontAwesomeIcon icon={faDrumstickBite} /> Meats
               </li>
+              </Link>
+              <Link to="/shop" style={{textDecoration: "none"}}>
               <li>
                 <FontAwesomeIcon icon={faFish} /> Seafoods
               </li>
+              </Link>
+              <Link to="/shop" style={{textDecoration: "none"}}>
               <li>
                 <FontAwesomeIcon icon={faCheese} /> Dairy
               </li>
+              </Link>
+              <Link to="/shop" style={{textDecoration: "none"}}>
               <li>
                 <FontAwesomeIcon icon={faBreadSlice} /> Bread and Bakeries
               </li>
+              </Link>
+              <Link to="/shop" style={{textDecoration: "none"}}>
               <li>
                 <FontAwesomeIcon icon={faCoffee} /> Beverages
               </li>
+              </Link>
+              <Link to="/shop" style={{textDecoration: "none"}}>
               <li>
                 <FontAwesomeIcon icon={faCookieBite} /> Snacks
               </li>
+              </Link>
+              <Link to="/shop" style={{textDecoration: "none"}}>
               <li>
                 <FontAwesomeIcon icon={faSnowflake} /> Frozen Items
               </li>
+              </Link>
+              <Link to="/shop" style={{textDecoration: "none"}}>
               <li>
                 <FontAwesomeIcon icon={faHome} /> Household Needs
               </li>
+              </Link>
+              <Link to="/shop" style={{textDecoration: "none"}}>
               <li>
                 <FontAwesomeIcon icon={faHeartbeat} /> Healthcare
               </li>
+              </Link>
+              
             </ul>
           </div>
         </div>
@@ -113,10 +137,11 @@ const Home = ({ isDark }) => {
                 }}
               >
                 <div className="carousel-content">
-                  <h1>{slide.title}</h1>
+                  <h1 className="corousel-content-header">{slide.title}</h1>
                   <p>{slide.description1}</p>
                   <p>{slide.description2}</p>
-                  <button>Shop Now</button>
+                  <Link to="/shop"><button>Shop Now</button></Link>
+                  
                 </div>
               </div>
             ))}
@@ -144,7 +169,6 @@ const Home = ({ isDark }) => {
       </div>
       <Advertisement isDark={isDark}/>
       <PopularProducts/>
-      <Footer/>
     </>
   );
 };

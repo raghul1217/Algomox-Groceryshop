@@ -4,7 +4,6 @@
   padding: 40px;
   background-color: var(--primarybackground);
   border-radius: 10px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   max-width: 1200px;
   margin: 20px auto;
   align-items: center;
@@ -246,8 +245,8 @@
 
 @media (max-width: 768px) {
   .pd-product-details {
-    flex-direction: column; /* Stack the content vertically on smaller screens */
-    padding: 20px; /* Reduce padding for better spacing on smaller screens */
+    flex-direction: column; 
+    padding: 20px; 
     padding-top: 50px; /* Adjust the top padding to avoid content being too close to the top */
   }
 
@@ -277,8 +276,9 @@
   }
 
   .pd-quantity-controls {
-    flex-direction: column-reverse; /* Stack quantity controls vertically */
-    align-items: center; /* Center the quantity controls */
+    flex-direction: row; /* Stack quantity controls vertically */
+    align-items: center;
+    justify-content: center; /* Center the quantity controls */
   }
 
   .pd-quantity-controls span {
@@ -317,11 +317,12 @@
   }
 
   .pd-main-image {
-    max-width: 100%; /* Ensure the main image takes full width */
+    max-width: 100%; 
   }
 
   .pd-thumbnails {
-    justify-content: flex-start; /* Align thumbnails to the left */
+    width: 100%;
+    justify-content: center; 
     gap: 8px; /* Adjust gap for better spacing */
     flex-wrap: nowrap; /* Prevent thumbnails from wrapping */
   }

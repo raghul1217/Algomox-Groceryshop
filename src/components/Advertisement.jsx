@@ -6,6 +6,7 @@ import chips from "../assets/chips.png";
 import darkeggs from "../assets/eggs-d.png";
 import darkcookies from "../assets/cookies-d.png";
 import darkchips from "../assets/chips-d.png";
+import { Link } from "react-router-dom";
 
 
 const Advertisement = ({ isDark }) => {
@@ -44,7 +45,7 @@ const Advertisement = ({ isDark }) => {
           <p id="ad-content">{card.content}</p>
           <h2 style={{width: '60%', 'padding-top': "16px", 'padding-left': "16px", }}>{card.title}</h2>
           <p>{card.subtitle}</p>
-          <button className="a-shop-now-btn">Shop Now</button>
+          <Link to="/shop"><button className="a-shop-now-btn">Shop Now</button></Link>
         </div>
       ))}
     </div>

@@ -11,6 +11,7 @@ import LoginPage from "./pages/LoginPage";
 import AccountPage from "./pages/AccountPage";
 import SignupPage from "./pages/SignupPage";
 import MobileNavbar from "./components/MobileNavbar";
+import Footer from "./components/Footer";
 
 function App() {
   const [isDark, setIsDark] = useLocalStorage("isDark", false);
@@ -34,6 +35,7 @@ function App() {
           <Route path="/signup" element={<SignupPage />} />
           <Route path="/account" element={<AccountPage />} />
         </Routes>
+        <Footer/>
       </Router>
     </div>
   );

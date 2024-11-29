@@ -21,6 +21,7 @@
     background-color: var(--secondarybackground);
     padding: 20px;
     box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
   }
   
   .sp-title {
@@ -38,6 +39,7 @@
     width: 100%;
     max-width: 450px;
     box-sizing: border-box;
+    padding-right: 60px;
   }
   
   .sp-form-container > div {
@@ -102,6 +104,13 @@
   
   .sp-login-link a:hover {
     text-decoration: underline;
+  }
+
+  .sign-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
   }
   
   /* Responsive Adjustments */

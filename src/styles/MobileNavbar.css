@@ -18,6 +18,18 @@
     justify-content: space-between;
     padding: 10px 70px;
   }
+
+  .d-brand p{
+    display: flex;
+    gap: 3px;
+  }
+
+
+  .logo-class{
+    width: 30px;
+    height: 30px;
+    margin-bottom: 5px;
+  }
   
   /* Mobile-specific styles */
   .mobile {
@@ -166,7 +178,7 @@
   padding: 10px 15px;
   padding-left: 10px; /* Add padding for the icon */
   border: none;
-  background-color: var(--whitewhite);
+  background-color: var(--secondarybackground);
   font-size: 14px;
   color: var(--darktext);
   outline: none;

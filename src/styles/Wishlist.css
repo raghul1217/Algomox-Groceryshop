@@ -2,7 +2,8 @@
     padding: 20px;
     background-color: var(--primarybackground);
     color: var(--darktext);
-    font-family: Arial, sans-serif;
+    font-family: "Montserrat", sans-serif;
+    padding-top: 140px;
   }
   
   .wl-title {
