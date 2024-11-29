@@ -8,6 +8,8 @@
   max-width: 1200px;
   margin: 20px auto;
   align-items: center;
+  padding-top: 130px;
+  font-family: "Montserrat", sans-serif;
 }
 
 .pd-product-image {
@@ -59,21 +61,7 @@
   margin: 15px 0;
 }
 
-.pd-quantity-btn {
-  width: 40px;
-  height: 40px;
-  border: none;
-  border-radius: 50%;
-  background-color: var(--primarycolor);
-  color: white;
-  font-size: 20px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
 
-.pd-quantity-btn:hover {
-  background-color: var(--purplewhite);
-}
 
 .pd-quantity-controls span {
   font-size: 18px;
@@ -96,6 +84,38 @@
 .pd-add-to-cart-btn {
   background-color: var(--primarycolor);
   color: white;
+  border: none;
+  outline: none;
+}
+
+.pr-button{
+  border: none;
+  outline: none;
+  background-color: var(--primarycolor);
+  color: var(--whitewhite);
+  padding: 9px 20px;
+  border: none;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+.pd-details button{
+  border: none;
+  outline: none;
+  background-color: var(--primarycolor);
+  color: var(--whitewhite);
+  padding: 9px 20px;
+  border: none;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+.pr-icon{
+  margin-right: 5px;
 }
 
 .pd-wishlist-btn {
@@ -162,4 +182,152 @@
 .pd-share-btn {
   position: relative;
   z-index: 10;
+}
+
+.pd-quantity-controls .pd-quantity-btn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--primarycolor);
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pd-quantity-controls .pd-quantity-btn:hover {
+  background-color: var(--purplewhite);
+}
+
+.pd-image-gallery {
+  display: flex;
+  flex-direction: column-reverse; /* Stack elements vertically */
+  align-items: center; /* Center the elements horizontally */
+  gap: 20px; /* Space between main image and gallery */
+  justify-content: center;
+}
+
+.pd-main-image {
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 20px; /* Space between main image and gallery */
+}
+
+.pd-main-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 2px solid var(--primarycolor);
+}
+
+.pd-thumbnails {
+  display: flex;
+  justify-content: center; /* Center thumbnails horizontally */
+  gap: 10px;
+  flex-wrap: wrap; /* Allow thumbnails to wrap to the next row if necessary */
+}
+
+.pd-thumbnail {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.pd-thumbnail:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .pd-product-details {
+    flex-direction: column; /* Stack the content vertically on smaller screens */
+    padding: 20px; /* Reduce padding for better spacing on smaller screens */
+    padding-top: 50px; /* Adjust the top padding to avoid content being too close to the top */
+  }
+
+  .pd-product-image {
+    width: 100%; /* Make the product image take full width */
+    height: auto; /* Ensure the height adjusts automatically */
+    margin-bottom: 20px; /* Space between image and details */
+  }
+
+  .pd-details {
+    padding: 0; /* Remove the padding around the details */
+    text-align: center; /* Center-align text for better readability */
+  }
+
+  .pd-details h1 {
+    font-size: 24px; /* Adjust font size for smaller screens */
+    margin-bottom: 10px;
+  }
+
+  .pd-details p {
+    font-size: 14px; /* Adjust font size for better readability on small screens */
+  }
+
+  .pd-star-rating {
+    gap: 10px; /* Increase gap between stars for better visibility */
+    justify-content: center; /* Center align the stars */
+  }
+
+  .pd-quantity-controls {
+    flex-direction: column-reverse; /* Stack quantity controls vertically */
+    align-items: center; /* Center the quantity controls */
+  }
+
+  .pd-quantity-controls span {
+    font-size: 16px; /* Adjust font size */
+  }
+
+  .pd-add-to-cart-btn,
+  .pd-wishlist-btn {
+    width: 100%; /* Make buttons full width for smaller screens */
+    margin: 10px 0; /* Adjust margin for spacing */
+    padding: 15px; /* Increase padding for better clickability */
+  }
+
+  .pd-price {
+    font-size: 20px; /* Adjust price font size */
+    margin-bottom: 10px;
+  }
+
+  .pd-separator {
+    margin: 10px 0; /* Reduce space around separator */
+  }
+
+  .pd-feature-list {
+    margin-top: 10px; /* Reduce margin for features list */
+  }
+
+  .pd-share-btn {
+    width: 100%; /* Make the share button full width */
+    padding: 12px; /* Adjust padding for better clickability */
+  }
+
+  .pd-image-gallery {
+    flex-direction: column-reverse; /* Stack the images and thumbnails vertically */
+    align-items: flex-start; /* Align items to the left */
+    gap: 10px; /* Reduce space between the main image and thumbnails */
+  }
+
+  .pd-main-image {
+    max-width: 100%; /* Ensure the main image takes full width */
+  }
+
+  .pd-thumbnails {
+    justify-content: flex-start; /* Align thumbnails to the left */
+    gap: 8px; /* Adjust gap for better spacing */
+    flex-wrap: nowrap; /* Prevent thumbnails from wrapping */
+  }
+
+  .pd-thumbnail {
+    width: 50px; /* Reduce the thumbnail size for smaller screens */
+    height: 50px;
+  }
 }
