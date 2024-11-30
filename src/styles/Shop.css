@@ -156,6 +156,7 @@
 
   .product-price{
     color: var(--purpleorange);
+    font-weight: 500;
   }
 
   .product-card .product-category{
@@ -179,7 +180,8 @@
   @media (max-width: 768px) {
     .favorite-icon {
       top: 12px; /* Adjust top position for mobile */
-      right: 12px; /* Adjust right position for mobile */
+      right: 12px;
+      font-size: 12px; /* Adjust right position for mobile */
     }
   }
   
@@ -462,16 +464,17 @@
       color: var(--primarycolor);
       cursor: pointer;
       transition: opacity 0.3s ease;
-      font-size: 10px;
+      font-size: 12px;
     }
 
     .faheart{
-      font-size: 10px;
+      font-size: 12px;
     }
 
     .favorite-icon{
       top: 7px;
       right: 10px;
+      font-size: 12px;
     }
 
   }

@@ -51,6 +51,7 @@
   .menu-bar {
     font-size: 1.5rem;
     cursor: pointer;
+    color: var(--whitewhite);
   }
   
   .mobile-nav {
@@ -195,15 +196,15 @@
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  border-radius: 0 5px 5px 0; /* Rectangular corners */
+  border-radius: 0 5px 5px 0; 
   display: flex;
   align-items: center;
 }
 
-/* Icon inside the search button */
+
 .searchbar-with-icon .newsearch-icon {
   font-size: 16px;
-  margin-right: 8px; /* Space between icon and text */
+  margin-right: 8px; 
 }
 
 /* Button hover effect */
