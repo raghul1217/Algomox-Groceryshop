@@ -244,7 +244,8 @@ const ProductDetails = () => {
     };
 
   return (
-    <div className="pd-product-details">
+    <div className="pd-bg">
+          <div className="pd-product-details">
       <div className="pd-image-gallery">
         <div className="pd-thumbnails">
           {product.images.map((image, index) => (
@@ -310,6 +311,8 @@ const ProductDetails = () => {
         </button>
       </div>
     </div>
+    </div>
+
   );
 };
 

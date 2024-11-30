@@ -28,7 +28,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home isDark={isDark} />} />
           <Route path="/shop" element={<Shop searchQuery={searchTerm}/>} />
-          <Route path="/products/:id" element={<ProductDetails />} />
+          <Route path="/products/:id" element={<ProductDetails/>} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/wishlist" element={<Wishlist />} />
           <Route path="/login" element={<LoginPage />} />

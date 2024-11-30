@@ -1,3 +1,7 @@
+body{
+  background-color: var(--primarybackground);
+}
+
 .pd-product-details {
   display: flex;
   gap: 30px;
@@ -9,6 +13,11 @@
   align-items: center;
   padding-top: 130px;
   font-family: "Montserrat", sans-serif;
+  margin-bottom: -10px;
+}
+
+.pd-bg{
+  background-color: var(--primarybackground);
 }
 
 .pd-product-image {
@@ -204,16 +213,16 @@
 
 .pd-image-gallery {
   display: flex;
-  flex-direction: column-reverse; /* Stack elements vertically */
-  align-items: center; /* Center the elements horizontally */
-  gap: 20px; /* Space between main image and gallery */
+  flex-direction: column-reverse; 
+  align-items: center; 
+  gap: 20px; 
   justify-content: center;
 }
 
 .pd-main-image {
   width: 100%;
   max-width: 500px;
-  margin-bottom: 20px; /* Space between main image and gallery */
+  margin-bottom: 20px; 
 }
 
 .pd-main-image img {
@@ -231,12 +240,13 @@
 }
 
 .pd-thumbnail {
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
   object-fit: cover;
   border-radius: 5px;
   cursor: pointer;
   transition: transform 0.2s ease;
+  border: 2px solid var(--primarycolor);
 }
 
 .pd-thumbnail:hover {

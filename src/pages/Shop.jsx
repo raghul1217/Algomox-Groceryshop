@@ -218,7 +218,7 @@ const Shop = () => {
   const addToCart = (product) => {
 
       if (!budget || budget <= 0) {
-    alert("Please enter your budget before adding items to the cart.");
+    alert("Please enter your budget on shop before adding items to the cart.");
     return;
   }
     const newTotal = cartTotal + product.price;
@@ -244,6 +244,9 @@ const Shop = () => {
     setCartTotal(newTotal);
     alert(`${product.name} added to cart!`);
   };
+
+
+  
 
   // Add to Wishlist
   const addToWishlist = (product) => {
@@ -295,7 +298,7 @@ const Shop = () => {
                 placeholder="Enter budget..."
               />
             </label>
-            <p>Cart Total: ₹{cartTotal}</p>
+            <p className="budget-p">Cart Total: ₹{cartTotal}</p>
           </div>
           <div className="filter2">
             <h3>Categories</h3>
