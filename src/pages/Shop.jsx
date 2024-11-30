@@ -216,10 +216,16 @@ const Shop = () => {
 
   // Add to Cart with Budget Check
   const addToCart = (product) => {
+
+    if (!budget || budget <= 0) {
+      alert("Please enter your budget before adding items to the cart.");
+      return;
+    }
+    
     const newTotal = cartTotal + product.price;
 
     if (newTotal > budget) {
-      alert("Exceeds your budget!");
+      alert("Exceeds your budget, Check your budget on shop!");
       return;
     }
 

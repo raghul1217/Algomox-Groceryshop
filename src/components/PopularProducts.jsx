@@ -104,6 +104,12 @@ const PopularProducts = () => {
 
   // Add to Cart Functionality
   const addToCart = (product) => {
+
+    if (!budget || budget <= 0) {
+      alert("Please enter your budget before adding items to the cart.");
+      return;
+    }
+
     const newTotal = cartTotal + product.price;
 
     if (newTotal > budget) {
