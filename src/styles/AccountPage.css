@@ -8,18 +8,18 @@
     font-family: Arial, sans-serif;
     padding: 40px;
     padding-top: 150px;
-}
-
-.ap-welcome-message {
+  }
+  
+  .ap-welcome-title {
     color: var(--primarycolor);
     font-size: 36px;
     font-weight: 700;
     text-align: center;
     margin-bottom: 20px;
-}
-
-.ap-info-container {
-    background-color: var(--whitewhite);
+  }
+  
+  .ap-info-container {
+    background-color: var(--secondarybackground);
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -28,52 +28,110 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.ap-user-info {
+  }
+  
+  .ap-user-info {
     font-size: 18px;
-    color: var(--grey);
+    color: var(--darktext);
     margin-bottom: 15px;
-}
-
-.ap-logout-button {
+    text-align: left;
+    width: 100%;
+  }
+  
+  .ap-phone,
+  .ap-address {
+    font-size: 16px;
+    color: var(--darktext);
+    margin: 5px 0;
+  }
+  
+  .ap-account-text {
+    text-align: left;
+    font-size: 16px;
+    color: var(--darktext);
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  .ap-introduction {
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+  
+  .ap-cart-info,
+  .ap-wishlist-info,
+  .ap-rewards-info {
+    margin: 10px 0;
+  }
+  
+  .ap-actions {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .ap-actions button {
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px;
     background-color: var(--primarycolor);
     color: white;
-    padding: 12px 24px;
     border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .ap-actions button:hover {
+    background-color: var(--grey);
+  }
+  
+  .ap-logout-btn1 {
+    background-color: red;
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 20px;
     border-radius: 8px;
     cursor: pointer;
-    font-size: 20px;
-    margin-top: 20px;
     transition: background-color 0.3s;
-}
-
-.ap-logout-button:hover {
-    background-color: var(--primarycolor-hover);
-}
-
-.ap-error-message {
-    color: red;
+    margin-top: 30px;
+  }
+  
+  .ap-logout-btn:hover {
+    background-color: var(--darkred);
+  }
+  
+  .ap-login-prompt {
+    font-size: 18px;
+    color: var(--grey);
     text-align: center;
-    margin-top: 20px;
-    font-size: 16px;
-}
-
-@media (max-width: 768px) {
+  }
+  
+  @media (max-width: 768px) {
     .ap-account-page {
-        padding: 20px;
+      padding: 20px;
     }
-
+  
     .ap-info-container {
-        width: 90%;
-        padding: 20px;
+      width: 90%;
+      padding: 20px;
+    }
+  
+    .ap-welcome-title {
+      font-size: 28px;
+    }
+  
+    .ap-actions button {
+      font-size: 14px;
+    }
+  
+    .ap-logout-btn {
+      font-size: 18px;
     }
 
-    .ap-welcome-message {
-        font-size: 28px;
+    .ap-actions{
+        flex-direction: column;
+        gap: 10px;
     }
-
-    .ap-logout-button {
-        font-size: 18px;
-    }
-}
+  }
+  

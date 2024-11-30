@@ -36,12 +36,14 @@ const Cart = () => {
                   <p className="ca-item-price">Price: ₹{item.price}</p>
                   <p className="ca-item-quantity">Quantity: {item.quantity}</p>
                 </div>
+                <div className="ca-btn">
                 <button
                   className="ca-remove-btn"
                   onClick={() => handleRemoveFromCart(item.id)}
                 >
                   Remove
                 </button>
+                </div>
               </li>
             ))}
           </ul>
