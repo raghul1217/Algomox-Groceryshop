@@ -84,10 +84,11 @@ const SignupPage = () => {
         {errorMessage && <p className="sp-error-message">{errorMessage}</p>}
         <button className="sp-button" type="submit">Sign Up</button>
       </form>
-      <p className="sp-login-link">
-        Already have an account? <a href="/login">Login</a>
-      </p>
+          <p className="sp-login-link">
+    Already have an account? <a href="/login">Login</a>
+  </p>
     </div>
+
   );
 };
 

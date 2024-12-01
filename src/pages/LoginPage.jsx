@@ -40,9 +40,11 @@ const LoginPage = () => {
         />
         <button className="lp-button" onClick={handleLogin}>Login</button>
         {message && <p className="lp-message">{message}</p>}
+
+        
       </div>
 
-      <p>Dont have an account <Link to="/signup">Signup</Link></p>
+      <p id="login-p">Dont have an account? <Link to="/signup">Signup</Link></p>
     </div>
   );
 };

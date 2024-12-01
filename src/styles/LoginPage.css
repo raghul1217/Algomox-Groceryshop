@@ -1,26 +1,16 @@
-:root {
-    --primarycolor: rgb(99,76,159);
-    --primarybackground: white;
-    --secondarybackground: rgb(241, 240, 240);
-    --navbar1: rgb(99,76,159);
-    --navbar2: rgb(241, 240, 240);
-    --blackwhite: black;
-    --icons: rgb(60, 60, 60);
-    --darktext: rgba(0, 0, 0, 0.745);
-    --purplewhite: rgb(99,76,159);
-    --grey: rgb(92, 91, 91);
-    --whitewhite: rgb(241, 240, 240);
-  }
+
   
   .lp-login-page {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
-    background-color: var(--secondarybackground);
+    background-color: var(--primarybackground);
     padding: 20px;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 130px;
+    padding-bottom: 40px;
   }
   
   .lp-title {
@@ -31,7 +21,7 @@
   }
   
   .lp-form-container {
-    background-color: var(--primarybackground);
+    background-color: var(--secondarybackground);
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 40px;
@@ -41,10 +31,12 @@
     flex-direction: column;
     gap: 20px;
     box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
   }
   
   .lp-input {
-    width: 100%;
+    width: 80%;
     padding: 12px;
     border: 1px solid var(--grey);
     border-radius: 6px;
@@ -59,7 +51,7 @@
   }
   
   .lp-button {
-    width: 100%;
+    width: 40%;
     padding: 12px;
     background-color: var(--primarycolor);
     color: white;
@@ -95,6 +87,15 @@
   .lp-signup-link a:hover {
     text-decoration: underline;
   }
+
+  .lp-login-page #login-p{
+    padding-top: 10px;
+    color: var(--darktext);
+  }
+
+  .lp-login-page #login-p link{
+    text-decoration: none;
+  }
   
   /* Responsive Adjustments */
   @media screen and (max-width: 600px) {
@@ -113,6 +114,10 @@
       padding: 10px;
       font-size: 0.9rem;
     }
+
+    .login-p{
+      padding-top: 10px;
+    }
   }
   
   @media screen and (max-width: 400px) {
@@ -122,5 +127,9 @@
   
     .lp-form-container {
       padding: 20px;
+    }
+
+    .login-p{
+      margin-top: 10px;
     }
   }
