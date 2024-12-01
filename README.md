@@ -1,6 +1,6 @@
 # GroceryShop 🛍️🛒
 
-![GroceryShop Banner](https://via.placeholder.com/1200x400?text=GroceryShop+App) <!-- Replace with your banner image URL -->
+![GroceryShop Banner](../assets/rm-home.png)
 
 ## 💻 Tech Stack:
 - **⚡ Vite + React**  
@@ -35,8 +35,6 @@
 
 ## 📜 Description:  
 **This project emphasizes a sleek, modern design with a pleasant color palette, focusing primarily on frontend aesthetics and user experience. It includes a variety of features, such as adding products to the cart or wishlist, with the option to remove items as needed. A robust filter system is implemented to help users search for products more effectively. Additionally, a budget feature allows users to set a spending limit and continue shopping within their desired range, enhancing convenience and usability.**
-
-![{77361033-A465-4DD1-BD8A-891C24B8F6C6}](https://github.com/user-attachments/assets/f46bccf4-842d-4e8d-9e92-458ca12bc7bb)
 
 
 ## 🖼️ Screenshots:
