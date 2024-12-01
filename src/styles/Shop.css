@@ -102,7 +102,7 @@
 
   @media (max-width: 768px){
     .pp-products-grid{
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
   }
 
@@ -512,5 +512,7 @@
     }
 
   }
+
+
 
 
