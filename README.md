@@ -1,6 +1,6 @@
 # GroceryShop 🛍️🛒
 
-![GroceryShop Banner](../GroceryShop/src/assets/rm-home.png)
+![GroceryShop Banner](https://github.com/raghul1217/Algomox-Groceryshop/blob/main/src/assets/rm-home.png)
 
 ## 💻 Tech Stack:
 - **⚡ Vite + React**  
