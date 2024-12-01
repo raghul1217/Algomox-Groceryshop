@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import "../styles/LoginPage.css"; // Import the CSS file for styling
 
 const LoginPage = () => {
@@ -41,6 +41,8 @@ const LoginPage = () => {
         <button className="lp-button" onClick={handleLogin}>Login</button>
         {message && <p className="lp-message">{message}</p>}
       </div>
+
+      <p>Dont have an account <Link to="/signup">Signup</Link></p>
     </div>
   );
 };

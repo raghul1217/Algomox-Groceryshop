@@ -217,7 +217,7 @@ const Shop = () => {
   // Add to Cart with Budget Check
   const addToCart = (product) => {
 
-      if (!budget || budget <= 0) {
+    if (!budget || budget <= 0) {
     alert("Please enter your budget on shop before adding items to the cart.");
     return;
   }

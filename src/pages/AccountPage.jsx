@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import "../styles/AccountPage.css";
 
 const AccountPage = () => {
@@ -57,7 +57,10 @@ const AccountPage = () => {
           </div>
         </>
       ) : (
-        <p className="ap-login-prompt">Please log in to view your account.</p>
+        <>
+          <p className="ap-login-prompt">Please log in to view your account.</p>
+          <Link to="/login"><button>Login</button></Link>
+        </>
       )}
     </div>
   );
