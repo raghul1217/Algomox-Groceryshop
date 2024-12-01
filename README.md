@@ -1,6 +1,6 @@
 # GroceryShop 🛍️🛒
 
-![GroceryShop Banner](../assets/rm-home.png)
+![GroceryShop Banner](../GroceryShop/src/assets/rm-home.png)
 
 ## 💻 Tech Stack:
 - **⚡ Vite + React**  
