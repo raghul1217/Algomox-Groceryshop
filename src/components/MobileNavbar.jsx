@@ -118,13 +118,13 @@ const MobileNavbar = ({ isDark, setIsDark, onSearch }) => {
               <Link to="/shop">Shop</Link>
             </li>
             <li>
-              <a href="#">Fruits & Vegetables</a>
+            <Link to="/shop">Fruits & Vegetables</Link>
             </li>
             <li>
-              <a href="#">Beverages</a>
+            <Link to="/shop">Beverages</Link>
             </li>
             <li>
-              <a href="#">Contact</a>
+            <Link href="#contact">Contact</Link>
             </li>
           </ul>
         </div>

@@ -22,8 +22,8 @@ import visa from "../assets/products/payments/visa.png";
 
 const Footer = () => {
   return (
-    <footer className="footer-container">
-      <div className="footer-columns">
+    <footer className="footer-container" id="contact">
+      <div className="footer-columns" id="contact">
         {/* Column 1 */}
         <div className="footer-column">
           <h3 className="footer-brand">
